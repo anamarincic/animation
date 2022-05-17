@@ -1,0 +1,46 @@
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/colors";
+
+.wrapper {
+  @include flex-container;
+  height: 70vh;
+}
+
+.wrapper div {
+  text-align: center;
+  color: $text;
+  font-size: 140px;
+  height: 300px;
+  padding-top: 50px;
+}
+
+.flex-item {
+  flex-basis: 25%;
+  position: relative;
+}
+
+@keyframes animation1 {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 250px;
+  }
+}
+
+.flex-item:nth-child(1) {
+  background-color: $color1;
+  animation: animation1 1.5s linear forwards;
+}
+
+.flex-item:nth-child(2) {
+  background-color: $color2;
+  animation: animation1 1.5s linear 1.5s both;
+}
+
+.flex-item:nth-child(3) {
+  background-color: $color3;
+  animation: animation1 1.5s linear 3s both;
+}
+

@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 70vh;
+}
+
+.wrapper div {
+  text-align: center;
+  color: #eee;
+  font-size: 140px;
+  height: 300px;
+  padding-top: 50px;
+}
+
+.flex-item {
+  flex-basis: 25%;
+  position: relative;
+}
+
+@-webkit-keyframes animation1 {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 250px;
+  }
+}
+
+@keyframes animation1 {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 250px;
+  }
+}
+.flex-item:nth-child(1) {
+  background-color: rgb(116, 115, 115);
+  -webkit-animation: animation1 1.5s linear forwards;
+          animation: animation1 1.5s linear forwards;
+}
+
+.flex-item:nth-child(2) {
+  background-color: rgba(216, 86, 86, 0.75);
+  -webkit-animation: animation1 1.5s linear 1.5s both;
+          animation: animation1 1.5s linear 1.5s both;
+}
+
+.flex-item:nth-child(3) {
+  background-color: rgba(236, 171, 105, 0.75);
+  -webkit-animation: animation1 1.5s linear 3s both;
+          animation: animation1 1.5s linear 3s both;
+}/*# sourceMappingURL=style.css.map */
